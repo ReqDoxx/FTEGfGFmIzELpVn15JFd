@@ -1,119 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CV - Nazar Pidvirnyi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CV - Nazar Pidvirnyi</title>
 </head>
 <body>
 
-    <!-- Header: Name, Title, and Contact Info -->
-    <header>
-        <h1>Nazar Pidvirnyi</h1>
-        <p><strong>Node.js developer</strong></p>
-        
-        <section>
-            <h2>Contact</h2>
-            <address>
-                <p>📍 Lviv, Ukraine</p>
-                <p>📞 <a href="tel:+38098xxx1595">+380 98 xxx 1595</a></p>
-                <p>📧 <a href="mailto:nexqite@gmail.com">nexqite@gmail.com</a></p>
-                <p>✈️ Telegram: <a href="https://t.me/NazarPidvirnyi">@NazarPidvirnyi</a></p>
-                <p>🐙 GitHub: <a href="https://github.com/Reqdoxx" target="_blank">github.com/Reqdoxx</a></p>
-                <p>🔗 LinkedIn: <a href="#">Nazar Pidvirnyi</a></p>
-            </address>
-        </section>
-        <hr>
-    </header>
+  <button id="theme-toggle" aria-label="Toggle theme">
+    <span class="icon" id="theme-icon">🌙</span>
+    <span id="theme-label">Night mode</span>
+  </button>
 
-    <main>
-        <!-- Section: About Me -->
-        <section>
-            <h2>About me</h2>
-            <p>
-                Node.js developer with 1+ years of experience in building and delivering business applications. 
-                Focused on backend development and DevOps, ensuring scalable, secure, and efficient solutions. 
-                Interested in cybersecurity and eager to constantly learn and apply new knowledge.
-            </p>
-        </section>
+  <header>
+    <h1>Nazar Pidvirnyi</h1>
+    <p class="title"><strong>Node.js developer</strong></p>
+    <section class="contact-card">
+      <h2>Contact</h2>
+      <address>
+        <p>📍 Lviv, Ukraine</p>
+        <p>📞 <a href="tel:+38098xxx1595">+380 98 xxx 1595</a></p>
+        <p>📧 <a href="mailto:nexqite@gmail.com">nexqite@gmail.com</a></p>
+        <p>✈️ Telegram: <a href="https://t.me/NazarPidvirnyi">@NazarPidvirnyi</a></p>
+        <p>🐙 GitHub: <a href="https://github.com/Reqdoxx" target="_blank">github.com/Reqdoxx</a></p>
+        <p>🔗 LinkedIn: <a href="#">Nazar Pidvirnyi</a></p>
+      </address>
+    </section>
+    <hr>
+  </header>
 
-        <!-- Section: Experience -->
-        <section>
-            <h2>Experience</h2>
+  <main>
 
-            <article>
-                <h3>Tech-lead Back-end | Market Reveal</h3>
-                <p><em>September 2024 - February 2025</em></p>
-                <p>
-                    <a href="https://github.com/Reqdoxx" target="_blank">GitHub Link</a>
-                </p>
-                <p>
-                    MarketReveal is a project that automatically searches and collects listings from marketplaces 
-                    like OLX, helping users quickly find the best products with cheapest prices.
-                </p>
-                <p><strong>Tech stack:</strong> TypeScript, Nest.js, GrammyJS, PostgreSQL, Sequelize, Redis, Git, GitHub, Docker, Docker-compose, SOLID, Jira, SCRUM.</p>
-            </article>
+    <section class="about">
+      <h2>About me</h2>
+      <p class="about-text">
+        Node.js developer with 1+ years of experience in building and delivering business applications.
+        Focused on backend development and DevOps, ensuring scalable, secure, and efficient solutions.
+        Interested in cybersecurity and eager to constantly learn and apply new knowledge.
+      </p>
+    </section>
 
-            <article>
-                <h3>Tech-lead Back-end | Imei checker (NDA)</h3>
-                <p><em>August 2024 - February 2025</em></p>
-                <p>
-                    Telegram bot wrapper for multiple existing imei checking services providing more comfortable 
-                    access to them inside telegram.
-                </p>
-                <p><strong>Tech stack:</strong> JavaScript, Express.js, grammY.js, PostgreSQL, Sequelize, Redis, Docker, Docker-compose, Ngrok.</p>
-            </article>
-        </section>
+    <section class="experience">
+      <h2>Experience</h2>
+      <article>
+        <h3>Tech-lead Back-end | Market Reveal</h3>
+        <em>September 2024 – February 2025</em>
+        <p><a href="https://github.com/Reqdoxx" target="_blank">→ GitHub Link</a></p>
+        <p>MarketReveal is a project that automatically searches and collects listings from marketplaces like OLX, helping users quickly find the best products with cheapest prices.</p>
+        <p><strong>Tech stack:</strong> TypeScript, Nest.js, GrammyJS, PostgreSQL, Sequelize, Redis, Git, GitHub, Docker, Docker-compose, SOLID, Jira, SCRUM.</p>
+      </article>
+      <article>
+        <h3>Tech-lead Back-end | IMEI Checker (NDA)</h3>
+        <em>August 2024 – February 2025</em>
+        <p>Telegram bot wrapper for multiple existing IMEI checking services providing more comfortable access to them inside Telegram.</p>
+        <p><strong>Tech stack:</strong> JavaScript, Express.js, grammY.js, PostgreSQL, Sequelize, Redis, Docker, Docker-compose, Ngrok.</p>
+      </article>
+    </section>
 
-        <!-- Section: Skills -->
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>Python, JavaScript, Typescript</li>
-                <li>HTML/CSS</li>
-                <li>SQLite, PostgreSQL, Sequelize</li>
-                <li>Nest.js, Express.js, grammY.js</li>
-                <li>Git, GitHub</li>
-                <li>Docker, Docker-compose</li>
-                <li>AWS, DigitalOcean, Ngrok</li>
-                <li>Redis, RabbitMQ</li>
-                <li>Clean code, SOLID Principles</li>
-                <li>HTTP/HTTPS, RestAPI</li>
-                <li>Jira, SCRUM</li>
-            </ul>
-        </section>
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul class="tag-list">
+        <li>Python</li><li>JavaScript</li><li>TypeScript</li>
+        <li>HTML/CSS</li><li>SQLite</li><li>PostgreSQL</li>
+        <li>Sequelize</li><li>Nest.js</li><li>Express.js</li>
+        <li>grammY.js</li><li>Git</li><li>GitHub</li>
+        <li>Docker</li><li>Docker-compose</li><li>AWS</li>
+        <li>DigitalOcean</li><li>Ngrok</li><li>Redis</li>
+        <li>RabbitMQ</li><li>Clean Code</li><li>SOLID</li>
+        <li>HTTP/HTTPS</li><li>REST API</li><li>Jira</li><li>SCRUM</li>
+      </ul>
+    </section>
 
-        <!-- Section: Education -->
-        <section>
-            <h2>Education</h2>
-            <h3>Lviv Polytechnic National University</h3>
-            <p>Cybersecurity</p>
-            <p><em>September 2023 - Present</em></p>
-        </section>
+    <section class="education">
+      <h2>Education</h2>
+      <div class="edu-card">
+        <div>
+          <h3>Lviv Polytechnic National University</h3>
+          <p>Cybersecurity</p>
+        </div>
+        <span class="edu-badge">Sep 2023 – Present</span>
+      </div>
+    </section>
 
-        <section>
-            <h2>Experience</h2>
-            <h3>SoftServe</h3>
-            <p>Security Analyst</p>
-            <p><em>June 2025 - Present</em></p>
-        </section>
+    <section class="work">
+      <h2>Work Experience</h2>
+      <div class="edu-card edu-card--accent">
+        <div>
+          <h3>SoftServe</h3>
+          <p>Security Analyst</p>
+        </div>
+        <span class="edu-badge">Jun 2025 – Present</span>
+      </div>
+    </section>
 
-        <!-- Section: Languages -->
-        <section>
-            <h2>Languages</h2>
-            <ul>
-                <li><strong>English:</strong> Advanced (C1)</li>
-                <li><strong>Ukrainian:</strong> Native (C2)</li>
-            </ul>
-        </section>
-    </main>
+    <section class="languages">
+      <h2>Languages</h2>
+      <ul class="tag-list">
+        <li><strong>English:</strong> Advanced (C1)</li>
+        <li><strong>Ukrainian:</strong> Native (C2)</li>
+      </ul>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Nazar Pidvirnyi. All rights reserved.</p>
-    </footer>
+    <section class="comments" id="comments-section">
+      <h2>Employer Comments</h2>
+      <p class="loading-text" id="comments-loading">⏳ Loading comments...</p>
+      <div id="comments-list"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <p class="copyright">© 2026 Nazar Pidvirnyi. All rights reserved.</p>
+    <div class="ls-display" id="local-storage-display">
+      <h3>💾 Browser &amp; System Info (localStorage)</h3>
+      <div id="ls-items"></div>
+    </div>
+  </footer>
+
+  <!-- Feedback Modal -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <button id="modal-close" class="modal-close" aria-label="Close modal">✕</button>
+      <h2 id="modal-title">👋 Let's Connect!</h2>
+      <p class="modal-sub">You've been here for a minute — fancy leaving a message?</p>
+      <div id="form-success" class="form-success">
+        <div class="checkmark">✅</div>
+        <p>Message sent!</p>
+        <small>I'll get back to you soon.</small>
+      </div>
+      <!-- Replace YOUR_FORM_ID with actual Formspree endpoint -->
+      <form id="contact-form" action="https://formspree.io/f/xojnkdon" method="POST">
+        <div class="form-group">
+          <label for="f-name">Name</label>
+          <input id="f-name" type="text" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="f-email">Email</label>
+          <input id="f-email" type="email" name="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" type="tel" name="phone" placeholder="+380 00 000 0000">
+        </div>
+        <div class="form-group">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" placeholder="Your message..." required></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    /* ── ① localStorage ── */
+    function saveBrowserInfo() {
+      const ua = navigator.userAgent;
+      let browser = 'Unknown';
+      if (ua.includes('Firefox'))     browser = 'Firefox';
+      else if (ua.includes('Edg'))    browser = 'Microsoft Edge';
+      else if (ua.includes('OPR'))    browser = 'Opera';
+      else if (ua.includes('Chrome')) browser = 'Google Chrome';
+      else if (ua.includes('Safari')) browser = 'Safari';
+
+      let os = 'Unknown';
+      if (ua.includes('Windows NT 10')) os = 'Windows 10/11';
+      else if (ua.includes('Windows'))  os = 'Windows';
+      else if (ua.includes('Mac OS'))   os = 'macOS';
+      else if (ua.includes('Linux'))    os = 'Linux';
+      else if (ua.includes('Android'))  os = 'Android';
+      else if (ua.includes('iPhone'))   os = 'iOS (iPhone)';
+      else if (ua.includes('iPad'))     os = 'iOS (iPad)';
+
+      const info = {
+        'Browser':              browser,
+        'OS':                   os,
+        'Platform':             navigator.platform || 'N/A',
+        'Language':             navigator.language,
+        'Languages':            navigator.languages?.join(', ') || 'N/A',
+        'Cookies Enabled':      navigator.cookieEnabled ? 'Yes' : 'No',
+        'Online':               navigator.onLine ? 'Yes' : 'No',
+        'Screen Resolution':    `${screen.width} × ${screen.height}`,
+        'Viewport':             `${window.innerWidth} × ${window.innerHeight}`,
+        'Color Depth':          `${screen.colorDepth} bit`,
+        'Pixel Ratio':          window.devicePixelRatio + 'x',
+        'Timezone':             Intl.DateTimeFormat().resolvedOptions().timeZone,
+        'Hardware Concurrency': navigator.hardwareConcurrency + ' cores',
+        'Touch Support':        ('ontouchstart' in window) ? 'Yes' : 'No',
+        'User Agent':           ua,
+        'Last Visit':           new Date().toLocaleString(),
+      };
+
+      Object.entries(info).forEach(([k, v]) => localStorage.setItem(k, v));
+
+      const container = document.getElementById('ls-items');
+      container.innerHTML = '';
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        const val = localStorage.getItem(key);
+        const row = document.createElement('div');
+        row.className = 'ls-item';
+        row.innerHTML = `<span class="ls-key">${key}</span><span class="ls-val">${val}</span>`;
+        container.appendChild(row);
+      }
+    }
+    saveBrowserInfo();
+
+    /* ── ② API Comments ── */
+    const VARIANT = 5; // ← свій номер варіанту
+
+    async function loadComments() {
+      try {
+        const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${VARIANT}/comments`);
+        if (!res.ok) throw new Error('Network error');
+        const comments = await res.json();
+        document.getElementById('comments-loading').style.display = 'none';
+        const list = document.getElementById('comments-list');
+        comments.forEach(c => {
+          const card = document.createElement('div');
+          card.className = 'comment-card';
+          card.innerHTML = `
+            <div class="comment-name">${c.name}</div>
+            <div class="comment-email">${c.email}</div>
+            <div class="comment-body">${c.body}</div>
+          `;
+          list.appendChild(card);
+        });
+      } catch {
+        document.getElementById('comments-loading').textContent = '⚠️ Failed to load comments.';
+      }
+    }
+    loadComments();
+
+    /* ── ③ Modal after 1 minute ── */
+    const overlay  = document.getElementById('modal-overlay');
+    const closeBtn = document.getElementById('modal-close');
+    const form     = document.getElementById('contact-form');
+    const success  = document.getElementById('form-success');
+
+    const openModal  = () => overlay.classList.add('open');
+    const closeModal = () => overlay.classList.remove('open');
+
+    setTimeout(openModal, 60 * 1000);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+          setTimeout(closeModal, 3000);
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      } catch {
+        alert('Network error. Please try again.');
+      }
+    });
+
+    /* ── ④ Theme ── */
+    const html       = document.documentElement;
+    const themeIcon  = document.getElementById('theme-icon');
+    const themeLabel = document.getElementById('theme-label');
+
+    const getAutoTheme = () => {
+      const h = new Date().getHours();
+      return (h >= 7 && h < 21) ? 'light' : 'dark';
+    };
+
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      themeIcon.textContent  = theme === 'dark' ? '☀️' : '🌙';
+      themeLabel.textContent = theme === 'dark' ? 'Day mode' : 'Night mode';
+      localStorage.setItem('theme', theme);
+      saveBrowserInfo();
+    }
+
+    applyTheme(localStorage.getItem('theme') || getAutoTheme());
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+
+    setInterval(() => {
+      if (!localStorage.getItem('theme')) applyTheme(getAutoTheme());
+    }, 60 * 1000);
+  </script>
 
 </body>
 </html>
