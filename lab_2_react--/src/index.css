@@ -19,4 +19,9 @@
 @keyframes fadeUp {
   0%   { opacity: 0; transform: translateY(24px); }
   100% { opacity: 1; transform: translateY(0); }
+  
+}
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 400ms;
 }
