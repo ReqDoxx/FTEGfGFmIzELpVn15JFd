@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* ── Variables ── */
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #1a1a25;
+  --border: rgba(255,255,255,0.07);
+  --accent: #7DF9AA;
+  --accent2: #4FACFE;
+  --text: #e8e8f0;
+  --muted: #7070a0;
+  --glow: rgba(125, 249, 170, 0.15);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Animated grid background ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(125,249,170,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125,249,170,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Layout ── */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ── Header ── */
+header {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+header h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  background: linear-gradient(135deg, #fff 30%, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+  animation: fadeUp 0.7s ease both;
+}
+
+header > p {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s 0.1s ease both;
+}
+
+header > p strong { font-weight: 400; }
+
+/* Contact section in header */
+header section {
+  animation: fadeUp 0.7s 0.2s ease both;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+
+header section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+address { font-style: normal; }
+
+address p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text);
+  transition: color 0.2s;
+}
+address p:last-child { border-bottom: none; }
+
+address a {
+  color: var(--accent2);
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+address a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--glow);
+}
+
+/* ── HR ── */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  margin: 16px 0 48px;
+  opacity: 0.4;
+}
+
+/* ── Main sections ── */
+main section {
+  margin-bottom: 56px;
+  animation: fadeUp 0.6s ease both;
+}
+
+main section:nth-child(1) { animation-delay: 0.25s; }
+main section:nth-child(2) { animation-delay: 0.35s; }
+main section:nth-child(3) { animation-delay: 0.45s; }
+main section:nth-child(4) { animation-delay: 0.55s; }
+main section:nth-child(5) { animation-delay: 0.6s; }
+main section:nth-child(6) { animation-delay: 0.65s; }
+
+/* ── Section headings ── */
+main h2, main > section > h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main h2::after, main > section > h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── About ── */
+main section:first-child p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #c0c0d8;
+  font-family: 'DM Mono', monospace;
+  font-style: italic;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent);
+}
+
+/* ── Experience cards ── */
+article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+article::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+article:hover {
+  border-color: rgba(125,249,170,0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(125,249,170,0.05);
+}
+article:hover::before { transform: scaleX(1); }
+
+article h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+article em {
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 12px;
+}
+
+article p { color: #9090b8; font-size: 0.82rem; margin-bottom: 8px; }
+article p:last-child { margin-bottom: 0; }
+
+article a {
+  color: var(--accent2);
+  text-decoration: none;
+  font-size: 0.78rem;
+}
+article a:hover { text-decoration: underline; }
+
+article strong { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.05em; }
+
+/* ── Skills ── */
+section ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+section ul li {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+section ul li:hover {
+  background: rgba(125, 249, 170, 0.08);
+  border-color: rgba(125, 249, 170, 0.3);
+  color: var(--accent);
+  box-shadow: 0 0 16px rgba(125, 249, 170, 0.1);
+}
+
+/* ── Education & Extra Experience ── */
+main section h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+main section > p {
+  color: #9090b8;
+  font-size: 0.82rem;
+}
+
+main section > em, main section p em {
+  font-style: normal;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+/* ── Languages ── */
+section ul li strong {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* ── Footer ── */
+footer {
+  padding-bottom: 48px;
+  text-align: center;
+}
+footer hr { margin-bottom: 20px; }
+footer p {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  header, main, footer { padding: 0 20px; }
+  header { padding-top: 48px; }
+  article { padding: 18px 20px; }
+}
