@@ -37,7 +37,7 @@ function EduCard({ title, sub, period, accentDark }: { title: string; sub: strin
           />
           <EduCard
             title="SoftServe inc."
-            sub="Security Analyst"
+            sub="CSOC Security Analyst"
             period="Jun 2025 – Present"
             accentDark
           />
